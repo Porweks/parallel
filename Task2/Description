@@ -1,0 +1,20 @@
+Model name:           Intel(R) Xeon(R) Gold 6248 CPU @ 2.50GHz
+    CPU family:         6
+    Model:              85
+    Thread(s) per core: 2
+    Core(s) per socket: 20
+    Socket(s):          2
+    Stepping:           7
+    CPU max MHz:        3900.0000
+    CPU min MHz:        1000.0000
+
+Наименование сервера :
+    ProLiant XL270d Gen10
+
+NUMA node:
+    Кол-во 2 штуки
+    У первой память 385636 MB
+    У второй память 387008MB
+
+Операционная система:
+    Ubuntu 22.04.3 LTS

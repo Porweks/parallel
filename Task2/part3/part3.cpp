@@ -4,7 +4,7 @@
 
 #define N 200
 #define nt 5
-#define variable 0.01
+#define variable -0.01
 
 void matrix_vector_product_omp(double *a, double *b, double *c, int m, int n){
     #pragma omp parallel num_threads(nt)
@@ -47,8 +47,20 @@ double* solution_without_for(double* A, double* b){
             }
             double *check=new double[N];
             matrix_vector_product_omp(A,x,check,N,N);
-            if()
-
+            double shit=0;
+            for(int i=0;i<N;i++){
+                shit+=(pow((check[i]-b[i]),2));
+            }
+            shit = sqrt(shit);
+            double help;
+            help=0;
+            for(int i=0;i<N;i++)
+                help+=(pow(b[i],2));
+            help=sqrt(help);
+            std::cout<<shit<<'/'<<help<<'='<<shit/help<<'\n';
+            if(shit/help<0.00001)
+                break;
+                
         }
     // }
     return x;
